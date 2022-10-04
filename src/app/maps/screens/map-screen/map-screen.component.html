@@ -1,0 +1,13 @@
+<div class="wrapper">
+
+    <app-loading *ngIf="!isUserLocationReady;else mapReady"></app-loading>
+    <ng-template #mapReady>
+        
+        <app-map-view></app-map-view>
+        <app-btn-my-location></app-btn-my-location> 
+
+        <!-- <app-search-bar></app-search-bar>
+        <app-btn-locactions-police></app-btn-locactions-police> -->
+    </ng-template>
+
+</div>
