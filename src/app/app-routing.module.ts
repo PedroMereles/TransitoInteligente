@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { InfoLawsComponent } from './components/info-laws/info-laws.component';
 import { LoginComponent } from './components/login/login.component';
 import { RecuperarPasswordComponent } from './components/recuperar-password/recuperar-password.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
+import { ResultLawsComponent } from './components/result-laws/result-laws.component';
 import { VerificarCorreoComponent } from './components/verificar-correo/verificar-correo.component';
 
 const routes: Routes = [
@@ -25,6 +27,12 @@ const routes: Routes = [
   },
   { 
     path: 'dashboard', component:DashboardComponent 
+  },
+  { 
+    path: 'result-laws', component:ResultLawsComponent 
+  },
+  { 
+    path: 'info-laws', component:InfoLawsComponent 
   },
   { 
     path: '**', redirectTo:'page-not-found', pathMatch:'full'

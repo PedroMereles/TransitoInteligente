@@ -1,0 +1,8 @@
+.logoInfo{
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+}
+img{
+    cursor: pointer;
+}

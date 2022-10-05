@@ -7,7 +7,7 @@ import { AngularFireModule } from '@angular/fire/compat'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule} from '@angular/common/http';
-
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 // Componentes
 import { AppComponent } from './app.component';
@@ -21,6 +21,9 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { environment } from 'src/environments/environment';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { MapsModule } from './maps/maps.module';
+import { ResultLawsComponent } from './components/result-laws/result-laws.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { InfoLawsComponent } from './components/info-laws/info-laws.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { MapsModule } from './maps/maps.module';
     RecuperarPasswordComponent,
     SpinnerComponent,
     PageNotFoundComponent,
+    ResultLawsComponent,
+    NavBarComponent,
+    InfoLawsComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,8 @@ import { MapsModule } from './maps/maps.module';
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
     MapsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFirestoreModule
     
   ],
   providers: [],
