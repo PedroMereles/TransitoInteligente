@@ -32,7 +32,7 @@ const routes: Routes = [
     path: 'result-laws', component:ResultLawsComponent 
   },
   { 
-    path: 'info-laws', component:InfoLawsComponent 
+    path: 'info-laws/:id', component:InfoLawsComponent 
   },
   { 
     path: '**', redirectTo:'page-not-found', pathMatch:'full'

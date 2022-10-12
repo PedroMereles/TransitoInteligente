@@ -5,26 +5,29 @@
 
             <div class="card-body">
                 <span class="h3">Listado</span>
-
-                <table class="table table-striped mt-5">
+                <h5 *ngIf="laws.length == 0" style="margin-top: 20px;">No hay datos para visualizar</h5>
+                <table *ngIf="laws.length > 0" class="table table-striped mt-5">
                     <thead>
                         <tr>
-                            <th>#</th>
                             <th>Capitulo</th>
                             <th>Articulo</th>
                             <th>Resumen</th>
+                            <th>Multa</th>
                             <th>Ver mas</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Capitulo 1</td>
-                            <td>Articulo 53</td>
-                            <td>Resumen</td>
+                        <tr *ngFor="let law of laws">
+                            <td> {{ law.capitulo}} </td>
+                            <td> {{ law.articulo}} </td>
+                            <td> {{ law.resumen}} </td>
+                            <td> {{ law.multa}} </td>
                             <td>
                                 <!-- <i class="fa-solid fa-circle-info text-info" src="../../../../assets/img/mapa.png" ></i> -->
-                                <img width="100" alt="Mi ubicación" class="logoInfo" src="../../../../assets/img/informacion.png" />
+                                <!--<img width="100" alt="Mi ubicación" class="logoInfo"
+                             src="../../../../assets/img/informacion.png" [routerLink]="['/info-laws/', law.id]" /> -->
+                             <i class="fas fa-edit fa-lg text-info mr-2" [routerLink]="['/info-laws/', law.id]"></i>
+                            
                             </td>
                         </tr>
 

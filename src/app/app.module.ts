@@ -24,6 +24,9 @@ import { MapsModule } from './maps/maps.module';
 import { ResultLawsComponent } from './components/result-laws/result-laws.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { InfoLawsComponent } from './components/info-laws/info-laws.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { InfoLawsComponent } from './components/info-laws/info-laws.component';
     ToastrModule.forRoot(), // ToastrModule added
     MapsModule,
     HttpClientModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+   /* provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())*/
     
   ],
   providers: [],

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "savvytransit-e0d0b": {
+      "hosting": {
+        "savvyTransit": [
+          "savvytransit-e0d0b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "savvytransit-e0d0b"
+  }
+}
