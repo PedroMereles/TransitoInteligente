@@ -27,6 +27,7 @@ import { InfoLawsComponent } from './components/info-laws/info-laws.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { MisViajesComponent } from './components/mis-viajes/mis-viajes.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     ResultLawsComponent,
     NavBarComponent,
     InfoLawsComponent,
+    MisViajesComponent,
   ],
   imports: [
     BrowserModule,

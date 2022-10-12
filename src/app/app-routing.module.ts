@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InfoLawsComponent } from './components/info-laws/info-laws.component';
 import { LoginComponent } from './components/login/login.component';
+import { MisViajesComponent } from './components/mis-viajes/mis-viajes.component';
 import { RecuperarPasswordComponent } from './components/recuperar-password/recuperar-password.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { ResultLawsComponent } from './components/result-laws/result-laws.component';
@@ -33,6 +34,9 @@ const routes: Routes = [
   },
   { 
     path: 'info-laws/:id', component:InfoLawsComponent 
+  },
+  { 
+    path: 'mis-viajes', component:MisViajesComponent 
   },
   { 
     path: '**', redirectTo:'page-not-found', pathMatch:'full'

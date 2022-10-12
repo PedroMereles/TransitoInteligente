@@ -1,0 +1,35 @@
+<app-nav-bar></app-nav-bar>
+<div class="wrapper">
+    <div class="container">
+        <div class="card">
+
+            <div class="card-body">
+                <span class="h3">Listado de viajes realizados</span>
+                <h5 *ngIf="viajes.length == 0" style="margin-top: 20px;">No hay datos para visualizar</h5>
+                <table *ngIf="viajes.length > 0" class="table table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Punto de salida</th>
+                            <th>Punto de llegada</th>
+                            <th>Tiempo estimado</th>
+                            <th>Kilometros</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let viaje of viajes">
+                            <td> {{ viaje.fecha}} </td>
+                            <td> {{ viaje.salida}} </td>
+                            <td> {{ viaje.llegada}} </td>
+                            <td> {{ viaje.tiempo}} </td>
+                            <td> {{ viaje.distancia}} </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+</div>
