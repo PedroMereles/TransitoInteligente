@@ -28,6 +28,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { MisViajesComponent } from './components/mis-viajes/mis-viajes.component';
+import { FiltroPipe } from './pipes/filtro.pipe';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MisViajesComponent } from './components/mis-viajes/mis-viajes.component
     NavBarComponent,
     InfoLawsComponent,
     MisViajesComponent,
+    FiltroPipe,
   ],
   imports: [
     BrowserModule,

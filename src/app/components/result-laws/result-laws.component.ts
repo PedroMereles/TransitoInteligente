@@ -10,6 +10,8 @@ import { LawsService } from 'src/app/services/laws.service';
 export class ResultLawsComponent implements OnInit {
 
   laws: any[] = [];
+  public page: number=0;
+  public search: string = '';
 
   constructor(
     private lawService: LawsService,
@@ -53,5 +55,24 @@ export class ResultLawsComponent implements OnInit {
       this.toatr.error( error ,'Error en borrado');
     })
   }
+
+  nextPage(){
+    this.page += 6;
+  }
+
+  previusPage(){
+
+    if(this.page>0){
+      this.page -= 6;
+    }
+    
+  }
+
+  searchLaw(search: string){
+    this.page = 0;
+    this.search = search;
+
+  }
+
 
 }

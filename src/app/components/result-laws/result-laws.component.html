@@ -6,6 +6,21 @@
             <div class="card-body">
                 <span class="h3">Listado</span>
                 <h5 *ngIf="laws.length == 0" style="margin-top: 20px;">No hay datos para visualizar</h5>
+
+                <input type="text"
+                        class="form-control mb-2"
+                        placeholder="Buscar"
+                        #txtSearch
+                        (keyup)="searchLaw( txtSearch.value )"
+                />
+                <button class="btn btn-primary"
+                (click)="previusPage()">back</button>
+                &nbsp;
+                <button class="btn btn-primary"
+                (click)="nextPage()"
+                [disabled]="( laws | filtro:page:search).length === 0 "
+                >next</button>
+
                 <table *ngIf="laws.length > 0" class="table table-striped mt-5">
                     <thead>
                         <tr>
@@ -17,7 +32,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let law of laws">
+                        <tr *ngFor="let law of laws | filtro:page:search">
                             <td> {{ law.capitulo}} </td>
                             <td> {{ law.articulo}} </td>
                             <td> {{ law.resumen}} </td>
@@ -33,6 +48,8 @@
 
                     </tbody>
                 </table>
+
+
 
             </div>
 
