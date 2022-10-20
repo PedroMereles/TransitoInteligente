@@ -29,6 +29,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { MisViajesComponent } from './components/mis-viajes/mis-viajes.component';
 import { FiltroPipe } from './pipes/filtro.pipe';
+import { AgregarSenalComponent } from './components/agregar-senal/agregar-senal.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { FiltroPipe } from './pipes/filtro.pipe';
     InfoLawsComponent,
     MisViajesComponent,
     FiltroPipe,
+    AgregarSenalComponent,
   ],
   imports: [
     BrowserModule,

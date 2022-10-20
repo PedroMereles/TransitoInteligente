@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AgregarSenalComponent } from './components/agregar-senal/agregar-senal.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InfoLawsComponent } from './components/info-laws/info-laws.component';
 import { LoginComponent } from './components/login/login.component';
@@ -37,6 +38,9 @@ const routes: Routes = [
   },
   { 
     path: 'mis-viajes', component:MisViajesComponent 
+  },
+  { 
+    path: 'agregar-senales', component:AgregarSenalComponent 
   },
   { 
     path: '**', redirectTo:'page-not-found', pathMatch:'full'
