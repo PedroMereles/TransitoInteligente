@@ -6,6 +6,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { BtnMyLocationComponent } from './components/btn-my-location/btn-my-location.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { PaddingComponent } from './components/padding/padding.component';
 
 
 
@@ -16,7 +17,8 @@ import { SearchResultsComponent } from './components/search-results/search-resul
     LoadingComponent,
     BtnMyLocationComponent,
     SearchBarComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    PaddingComponent
   ],
   imports: [
     CommonModule

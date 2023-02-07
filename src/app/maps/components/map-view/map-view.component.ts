@@ -16,7 +16,7 @@ export class MapViewComponent implements AfterViewInit {
   constructor(
 
     private placesService: PlacesService,
-    private mapService : MapService,
+    private mapService: MapService,
     private toastr: ToastrService
 
   ) { }
@@ -46,7 +46,7 @@ export class MapViewComponent implements AfterViewInit {
       .setLngLat(this.placesService.useLocation)
       .setPopup(popup)
       .addTo(map)
-      
+
     this.mapService.setMap(map);
 
 

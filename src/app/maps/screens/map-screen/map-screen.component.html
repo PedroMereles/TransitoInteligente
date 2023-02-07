@@ -2,6 +2,8 @@
 
     <app-loading *ngIf="!isUserLocationReady;else mapReady"></app-loading>
     <ng-template #mapReady>
+
+        <app-padding></app-padding>
         
         <app-map-view></app-map-view>
         <app-btn-my-location></app-btn-my-location> 
